@@ -6,19 +6,19 @@
  * Theme tokens
  * ===================================================================== */
 .ddp-app {
-	--ddp-accent: #6366f1;
-	--ddp-accent-2: #8b5cf6;
+	--ddp-accent: #4f46e5;
+	--ddp-accent-2: #7c3aed;
 	--ddp-accent-contrast: #ffffff;
-	--ddp-bg: #f4f5fb;
-	--ddp-panel: rgba(255, 255, 255, 0.72);
+	--ddp-bg: #ffffff;
+	--ddp-panel: #ffffff;
 	--ddp-panel-solid: #ffffff;
-	--ddp-border: rgba(15, 23, 42, 0.08);
+	--ddp-border: rgba(15, 23, 42, 0.09);
 	--ddp-border-strong: rgba(15, 23, 42, 0.14);
 	--ddp-text: #0f172a;
-	--ddp-muted: #64748b;
-	--ddp-soft: #f1f5f9;
-	--ddp-shadow: 0 18px 40px -22px rgba(15, 23, 42, 0.35);
-	--ddp-shadow-sm: 0 4px 14px -8px rgba(15, 23, 42, 0.3);
+	--ddp-muted: #6b7280;
+	--ddp-soft: #f5f6fb;
+	--ddp-shadow: 0 12px 32px -20px rgba(15, 23, 42, 0.25);
+	--ddp-shadow-sm: 0 3px 12px -7px rgba(15, 23, 42, 0.25);
 	--ddp-radius: 18px;
 	--ddp-radius-sm: 12px;
 
@@ -60,10 +60,7 @@
 	margin: 0 0 0 -20px;
 	padding: 28px 32px 60px;
 	min-height: calc(100vh - 32px);
-	background:
-		radial-gradient(900px 500px at 100% -5%, color-mix(in srgb, var(--ddp-accent) 16%, transparent), transparent 60%),
-		radial-gradient(700px 500px at -5% 110%, color-mix(in srgb, var(--ddp-accent-2) 14%, transparent), transparent 55%),
-		var(--ddp-bg);
+	background: var(--ddp-bg);
 	box-sizing: border-box;
 }
 
@@ -1111,10 +1108,7 @@
 	align-items: center;
 	justify-content: center;
 	padding: 30px;
-	background:
-		radial-gradient(900px 600px at 100% 0%, color-mix(in srgb, var(--ddp-accent) 22%, transparent), transparent 60%),
-		radial-gradient(800px 600px at 0% 100%, color-mix(in srgb, var(--ddp-accent-2) 20%, transparent), transparent 60%),
-		var(--ddp-bg);
+	background: var(--ddp-bg);
 	overflow-y: auto;
 }
 
@@ -1332,9 +1326,9 @@
 	margin: 14px 0;
 	padding: 14px 16px;
 	border: 1px solid #e2e4ea;
-	border-left: 4px solid #6366f1;
+	border-left: 4px solid #4f46e5;
 	border-radius: 10px;
-	background: #f8f9ff;
+	background: #f7f7ff;
 }
 
 .ddp-admin-order-box h3 {
@@ -1342,7 +1336,7 @@
 	font-size: 13px;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
-	color: #6366f1;
+	color: #4f46e5;
 }
 
 .ddp-admin-order-box p {

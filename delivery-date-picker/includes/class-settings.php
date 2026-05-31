@@ -47,8 +47,8 @@ class Settings {
 			'slot_required'     => 1,
 			'enable_note'       => 1,
 			'note_label'        => __( 'Delivery Instructions', 'delivery-date-picker' ),
-			'theme'             => 'auto',  // auto | light | dark.
-			'accent_color'      => '#6366f1',
+			'theme'             => 'light', // auto | light | dark. Light (white) by default.
+			'accent_color'      => '#4f46e5',
 			'first_day'         => (int) get_option( 'start_of_week', 1 ),
 			'placement'         => 'after_order_notes', // after_order_notes | before_payment | review_order.
 		);
@@ -172,7 +172,7 @@ class Settings {
 
 		if ( isset( $input['theme'] ) ) {
 			$theme         = sanitize_key( $input['theme'] );
-			$out['theme']  = in_array( $theme, array( 'auto', 'light', 'dark' ), true ) ? $theme : 'auto';
+			$out['theme']  = in_array( $theme, array( 'auto', 'light', 'dark' ), true ) ? $theme : 'light';
 		}
 
 		if ( isset( $input['placement'] ) ) {
