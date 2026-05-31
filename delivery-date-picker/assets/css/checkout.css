@@ -1,0 +1,382 @@
+/**
+ * Delivery Date Picker — checkout styles.
+ *
+ * Premium, theme-aware calendar widget for the WooCommerce checkout.
+ */
+
+.ddp-checkout-field {
+	--ddp-accent: #6366f1;
+	--ddp-accent-contrast: #ffffff;
+	--ddp-bg: #ffffff;
+	--ddp-surface: #f8fafc;
+	--ddp-border: #e6e8ef;
+	--ddp-text: #0f172a;
+	--ddp-muted: #64748b;
+	--ddp-disabled: #cbd5e1;
+	--ddp-radius: 16px;
+	--ddp-shadow: 0 10px 30px -12px rgba(15, 23, 42, 0.18);
+	margin: 28px 0;
+	color: var(--ddp-text);
+	font-family: inherit;
+	-webkit-font-smoothing: antialiased;
+}
+
+.ddp-checkout-field.ddp-theme-dark,
+.ddp-checkout-field.ddp-theme-auto {
+	color-scheme: light dark;
+}
+
+.ddp-checkout-field.ddp-theme-dark {
+	--ddp-bg: #0f172a;
+	--ddp-surface: #1e293b;
+	--ddp-border: #334155;
+	--ddp-text: #f1f5f9;
+	--ddp-muted: #94a3b8;
+	--ddp-disabled: #475569;
+	--ddp-shadow: 0 12px 32px -14px rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+	.ddp-checkout-field.ddp-theme-auto {
+		--ddp-bg: #0f172a;
+		--ddp-surface: #1e293b;
+		--ddp-border: #334155;
+		--ddp-text: #f1f5f9;
+		--ddp-muted: #94a3b8;
+		--ddp-disabled: #475569;
+		--ddp-shadow: 0 12px 32px -14px rgba(0, 0, 0, 0.6);
+	}
+}
+
+.ddp-field-title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 17px;
+	font-weight: 700;
+	margin: 0 0 4px;
+	color: var(--ddp-text);
+}
+
+.ddp-field-icon {
+	display: inline-flex;
+	width: 30px;
+	height: 30px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 9px;
+	background: color-mix(in srgb, var(--ddp-accent) 14%, transparent);
+	color: var(--ddp-accent);
+}
+
+.ddp-field-icon svg {
+	width: 17px;
+	height: 17px;
+}
+
+.ddp-field-title .required {
+	color: var(--ddp-accent);
+	text-decoration: none;
+	border: 0;
+}
+
+.ddp-field-description {
+	margin: 0 0 14px;
+	color: var(--ddp-muted);
+	font-size: 13.5px;
+}
+
+.ddp-card {
+	background: var(--ddp-bg);
+	border: 1px solid var(--ddp-border);
+	border-radius: var(--ddp-radius);
+	box-shadow: var(--ddp-shadow);
+	padding: 16px;
+	transition: border-color 0.2s ease;
+}
+
+/* Summary bar shown once a date is chosen. */
+.ddp-summary {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 14px;
+	border-radius: 12px;
+	background: color-mix(in srgb, var(--ddp-accent) 10%, var(--ddp-surface));
+	border: 1px solid color-mix(in srgb, var(--ddp-accent) 30%, var(--ddp-border));
+	margin-bottom: 14px;
+}
+
+.ddp-summary-icon {
+	display: inline-flex;
+	width: 24px;
+	height: 24px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: var(--ddp-accent);
+	color: var(--ddp-accent-contrast);
+	flex: none;
+}
+
+.ddp-summary-icon svg {
+	width: 14px;
+	height: 14px;
+}
+
+.ddp-summary-text {
+	font-weight: 600;
+	font-size: 14px;
+	flex: 1;
+}
+
+.ddp-change {
+	background: none;
+	border: 0;
+	color: var(--ddp-accent);
+	font-weight: 600;
+	cursor: pointer;
+	font-size: 13px;
+	padding: 4px 8px;
+	border-radius: 8px;
+}
+
+.ddp-change:hover {
+	background: color-mix(in srgb, var(--ddp-accent) 12%, transparent);
+}
+
+.ddp-calendar-wrap.ddp-collapsed {
+	display: none;
+}
+
+/* ---- Calendar ---- */
+.ddp-cal {
+	user-select: none;
+}
+
+.ddp-cal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.ddp-cal-month-title {
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.ddp-cal-arrow {
+	width: 34px;
+	height: 34px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	border: 1px solid var(--ddp-border);
+	background: var(--ddp-surface);
+	color: var(--ddp-text);
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+.ddp-cal-arrow:hover {
+	border-color: var(--ddp-accent);
+	color: var(--ddp-accent);
+}
+
+.ddp-cal-arrow svg {
+	width: 16px;
+	height: 16px;
+}
+
+.ddp-cal-dow {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	margin-bottom: 6px;
+}
+
+.ddp-cal-dow-cell {
+	text-align: center;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--ddp-muted);
+	padding: 4px 0;
+}
+
+.ddp-cal-days {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 4px;
+}
+
+.ddp-cal-day {
+	aspect-ratio: 1 / 1;
+	border: 1px solid transparent;
+	background: var(--ddp-surface);
+	border-radius: 10px;
+	color: var(--ddp-text);
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s ease;
+	position: relative;
+}
+
+.ddp-cal-day:hover:not(:disabled):not(.ddp-is-blank) {
+	border-color: var(--ddp-accent);
+	transform: translateY(-1px);
+}
+
+.ddp-cal-day.ddp-is-blank {
+	background: transparent;
+	cursor: default;
+	border: 0;
+}
+
+.ddp-cal-day.ddp-is-today {
+	box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--ddp-accent) 45%, transparent);
+}
+
+.ddp-cal-day.ddp-is-selected {
+	background: var(--ddp-accent);
+	color: var(--ddp-accent-contrast);
+	border-color: var(--ddp-accent);
+	font-weight: 700;
+}
+
+.ddp-cal-day.ddp-is-disabled {
+	color: var(--ddp-disabled);
+	background: transparent;
+	cursor: not-allowed;
+	text-decoration: line-through;
+	opacity: 0.7;
+}
+
+.ddp-cal-day.ddp-is-full::after {
+	content: "";
+	position: absolute;
+	bottom: 5px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: #ef4444;
+}
+
+/* ---- Slots ---- */
+.ddp-slots {
+	margin-top: 18px;
+	padding-top: 16px;
+	border-top: 1px dashed var(--ddp-border);
+}
+
+.ddp-slots-title {
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0 0 12px;
+}
+
+.ddp-slots-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 10px;
+}
+
+.ddp-slot-chip {
+	text-align: left;
+	border: 1px solid var(--ddp-border);
+	background: var(--ddp-surface);
+	border-radius: 12px;
+	padding: 11px 13px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	transition: all 0.15s ease;
+	color: var(--ddp-text);
+}
+
+.ddp-slot-chip:hover:not(.ddp-is-disabled) {
+	border-color: var(--ddp-accent);
+	transform: translateY(-1px);
+}
+
+.ddp-slot-chip.ddp-is-active {
+	border-color: var(--ddp-accent);
+	background: color-mix(in srgb, var(--ddp-accent) 12%, var(--ddp-surface));
+	box-shadow: inset 0 0 0 1px var(--ddp-accent);
+}
+
+.ddp-slot-chip-label {
+	font-weight: 600;
+	font-size: 13.5px;
+}
+
+.ddp-slot-chip-meta {
+	font-size: 12px;
+	color: var(--ddp-muted);
+}
+
+.ddp-slot-chip.ddp-is-disabled {
+	opacity: 0.55;
+	cursor: not-allowed;
+}
+
+.ddp-slot-chip.ddp-is-disabled .ddp-slot-chip-meta {
+	color: #ef4444;
+	font-weight: 600;
+}
+
+.ddp-slots-loading,
+.ddp-slots-empty {
+	color: var(--ddp-muted);
+	font-size: 13px;
+	padding: 8px 0;
+}
+
+/* ---- Note ---- */
+.ddp-note-field {
+	margin-top: 16px;
+}
+
+.ddp-note-field label {
+	display: block;
+	font-weight: 600;
+	font-size: 13.5px;
+	margin-bottom: 6px;
+}
+
+.ddp-note-field textarea {
+	width: 100%;
+	border-radius: 12px !important;
+	border: 1px solid var(--ddp-border) !important;
+	padding: 10px 12px !important;
+	background: var(--ddp-bg) !important;
+	color: var(--ddp-text) !important;
+}
+
+/* ---- Error ---- */
+.ddp-error {
+	margin-top: 12px;
+	color: #dc2626;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+@media (max-width: 520px) {
+	.ddp-card {
+		padding: 12px;
+	}
+	.ddp-cal-day {
+		font-size: 13px;
+		border-radius: 8px;
+	}
+	.ddp-slots-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}

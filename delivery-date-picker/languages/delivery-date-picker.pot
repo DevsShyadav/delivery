@@ -1,0 +1,126 @@
+# Copyright (C) 2026 Delivery Date Picker
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Delivery Date Picker for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://example.com/support\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-01-01T00:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Delivery Date Picker\n"
+"X-Domain: delivery-date-picker\n"
+
+msgid "Delivery Date Picker for WooCommerce"
+msgstr ""
+
+msgid "Delivery Date Picker requires WooCommerce to be installed and active."
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Delivery Date"
+msgstr ""
+
+msgid "Choose the day you would like your order to arrive."
+msgstr ""
+
+msgid "Delivery Instructions"
+msgstr ""
+
+msgid "Select a delivery date"
+msgstr ""
+
+msgid "Choose a time slot"
+msgstr ""
+
+msgid "No time slots available for this date."
+msgstr ""
+
+msgid "Loading…"
+msgstr ""
+
+msgid "Full"
+msgstr ""
+
+msgid "left"
+msgstr ""
+
+msgid "This date has already passed."
+msgstr ""
+
+msgid "This date is too soon — earlier than the minimum preparation time."
+msgstr ""
+
+msgid "This date is too far in the future."
+msgstr ""
+
+msgid "We do not deliver on this day of the week."
+msgstr ""
+
+msgid "This date is unavailable (holiday or closed day)."
+msgstr ""
+
+msgid "Fully booked for this date."
+msgstr ""
+
+msgid "All delivery slots are full for this date."
+msgstr ""
+
+msgid "The selected time slot is no longer available."
+msgstr ""
+
+msgid "Invalid time slot selected."
+msgstr ""
+
+msgid "Please choose a delivery time slot."
+msgstr ""
+
+msgid "The delivery date you selected is not valid."
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+
+msgid "Delivery"
+msgstr ""
+
+msgid "Delivery Schedule"
+msgstr ""
+
+msgid "Delivery Details"
+msgstr ""
+
+msgid "Save changes"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Availability"
+msgstr ""
+
+msgid "Time Slots"
+msgstr ""
+
+msgid "Holidays"
+msgstr ""
+
+msgid "Appearance"
+msgstr ""
+
+msgid "Settings saved."
+msgstr ""
+
+msgid "Security check failed. Please reload and try again."
+msgstr ""
+
+msgid "You do not have permission to do this."
+msgstr ""
